@@ -13,13 +13,14 @@ public class PlayerManager : MonoBehaviour
     public bool isHoldingJump = false;
     public float maxHoldJumpTime = 0.4f;
     public float holdJumpTimer = 0.0f;
-
+    
     public float jumpGroundThreshold = 10;
 
+    Animator Player;
 
     void Start()
     {
-           
+        Player = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -76,8 +77,17 @@ public class PlayerManager : MonoBehaviour
             }
         }
 
+        if (!isGrounded)
+        {
+            Player.SetBool("Jump", true);
+        }
+        else
+        {
+            Player.SetBool("Jump", false);
+        }
 
         transform.position = pos;
     }
+
 
 }
