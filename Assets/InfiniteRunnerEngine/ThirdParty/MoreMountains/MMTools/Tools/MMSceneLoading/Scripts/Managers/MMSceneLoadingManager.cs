@@ -77,14 +77,15 @@ namespace MoreMountains.Tools
 		/// <param name="sceneToLoad">Level name.</param>
 		public static void LoadScene(string sceneToLoad)
         {
-            _sceneToLoad = sceneToLoad;					
-			Application.backgroundLoadingPriority = ThreadPriority.High;
-			if (LoadingScreenSceneName!=null)
-			{
+            _sceneToLoad = sceneToLoad;
+            Application.backgroundLoadingPriority = ThreadPriority.High;
+            if (LoadingScreenSceneName != null)
+            {
                 LoadingSceneEvent.Trigger(sceneToLoad, LoadingStatus.LoadStarted);
-				SceneManager.LoadScene(LoadingScreenSceneName);
-			}
-		}
+                SceneManager.LoadScene(LoadingScreenSceneName);
+            }
+
+        }
 
 		/// <summary>
 		/// Call this static method to load a scene from anywhere

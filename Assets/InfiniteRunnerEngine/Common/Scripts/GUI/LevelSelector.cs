@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 using System.Collections;
 using MoreMountains.Tools;
 
@@ -26,13 +27,17 @@ namespace MoreMountains.InfiniteRunnerEngine
 		/// 
 		public void BackToLobby()
         {
-			SceneManager.LoadScene("Title");
+                SceneManager.LoadScene("Title");
+
         }
 	    public virtual void RestartLevel()
 	    {
-	      	//GameManager.Instance.UnPause();
-			LevelManager.Instance.GotoLevel(SceneManager.GetActiveScene().name);
-	    }
+
+                SceneManager.GetActiveScene();
+
+                
+
+        }
 
 	    /// <summary>
 	    /// Resumes the game

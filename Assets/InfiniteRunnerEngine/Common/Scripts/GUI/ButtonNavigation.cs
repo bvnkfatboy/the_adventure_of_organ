@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 namespace MoreMountains.InfiniteRunnerEngine
 {	
@@ -54,6 +55,8 @@ namespace MoreMountains.InfiniteRunnerEngine
 					currentIndex -= 1;
 				}
 			}
+			
+
 	        return currentIndex;
 	    }
 
@@ -71,7 +74,15 @@ namespace MoreMountains.InfiniteRunnerEngine
 	        {
 	            MoveMenu("higher");
 	        }
-	    }
+            if (_selectedIndex == 1)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+
+                    SceneManager.LoadScene("Title");
+                }
+            }
+        }
 
 		/// <summary>
 		/// Prevents fast keystrokes and triggers menu movement.

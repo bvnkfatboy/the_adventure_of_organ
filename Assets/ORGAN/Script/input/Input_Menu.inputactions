@@ -47,6 +47,17 @@
                 },
                 {
                     "name": "",
+                    "id": "8d60ed4a-b10c-4f54-96aa-ba4842f6c7e4",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Play",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "b4901b1a-756d-441e-a152-8270f297634e",
                     "path": "<Keyboard>/#(W)",
                     "interactions": "",

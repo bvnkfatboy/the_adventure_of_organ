@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 681858971}
   - component: {fileID: 681858973}
   - component: {fileID: 681858972}
-  - component: {fileID: 681858974}
+  - component: {fileID: 681858976}
   - component: {fileID: 681858975}
   m_Layer: 0
   m_Name: MenuManager
@@ -653,19 +653,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681858970}
   m_CullTransparentMesh: 1
---- !u!114 &681858974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 681858970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f560b3ce544937146a2e1da1498b0ded, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NumberOfButtons: 2
 --- !u!114 &681858975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -697,6 +684,19 @@ MonoBehaviour:
   m_DefaultActionMap: Keyboard
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &681858976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681858970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f560b3ce544937146a2e1da1498b0ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOfButtons: 2
 --- !u!1 &690625576
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,7 +937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1091309359
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1455,7 +1455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1842243264
 RectTransform:
   m_ObjectHideFlags: 0

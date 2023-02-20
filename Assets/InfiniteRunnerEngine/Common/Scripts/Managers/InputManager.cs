@@ -73,11 +73,7 @@ namespace MoreMountains.InfiniteRunnerEngine
 	        if ( (LevelManager.Instance.ControlScheme == LevelManager.Controls.SingleButton)
 				|| (LevelManager.Instance.ControlScheme == LevelManager.Controls.Swipe) )
 	        {
-	            if (GameManager.Instance.Status == GameManager.GameStatus.GameOver)
-	            {
-	                LevelManager.Instance.GameOverAction();
-	                return;
-	            }
+
 	            if (GameManager.Instance.Status == GameManager.GameStatus.LifeLost)
 	            {
 	                LevelManager.Instance.LifeLostAction();
