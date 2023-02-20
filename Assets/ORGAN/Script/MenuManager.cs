@@ -14,7 +14,7 @@ public class MenuManager : MonoBehaviour
         if (SelectedButton == 1)
         {
             // Debug.Log("Test");
-            SceneManager.LoadScene("Charecter");
+            SceneManager.LoadScene("Game");
         }
         else if (SelectedButton == 2)
         {
