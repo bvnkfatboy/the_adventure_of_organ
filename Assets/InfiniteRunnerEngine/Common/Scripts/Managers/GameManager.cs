@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.Tools;
+using System;
 
 namespace MoreMountains.InfiniteRunnerEngine
 {	
@@ -13,8 +14,15 @@ namespace MoreMountains.InfiniteRunnerEngine
 		/// the number of lives the player gets (you lose a life when your character (or your characters all) die.
 		/// lose all lives you lose the game and your points.
 		public int TotalLives = 3;
-	    /// The current number of lives
-	    public int CurrentLives { get; protected set;  }
+
+        internal void AddPoints(object v)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        /// The current number of lives
+        public int CurrentLives { get; protected set;  }
 		/// the current number of game points
 		public float Points { get; protected set; }
 		/// the current time scale
@@ -140,7 +148,20 @@ namespace MoreMountains.InfiniteRunnerEngine
 		/// use this to set the number of lives currently available
 		/// </summary>
 		/// <param name="lives">the new number of lives.</param>
-	    public virtual void SetLives(int lives)
+		/// 
+		public virtual void AddLives(int lives)
+		{
+			if (CurrentLives <= 2)
+            {
+				CurrentLives += lives;
+				if (GUIManager.Instance != null)
+				{
+					GUIManager.Instance.InitializeLives();
+				}
+			}
+		}
+
+		public virtual void SetLives(int lives)
 	    {
 			CurrentLives = lives;
 			if (GUIManager.Instance!=null)

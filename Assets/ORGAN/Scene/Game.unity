@@ -181,7 +181,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 433572, guid: 70f25d04382fe47a095b00bae126ce18, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 433572, guid: 70f25d04382fe47a095b00bae126ce18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -296,7 +296,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &309149940
 MonoBehaviour:
@@ -461,6 +461,166 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfButtons: 2
+--- !u!1 &845961014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 845961017}
+  - component: {fileID: 845961016}
+  - component: {fileID: 845961015}
+  m_Layer: 0
+  m_Name: PotionSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &845961015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845961014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7277539b95c0d45895792ecc99ce66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MutualizeWaitingPools: 0
+  NestWaitingPool: 1
+  NestUnderThis: 0
+  GameObjectToPool: {fileID: 6593321752895788945, guid: 751297e1bf7ff6e4597557ad5568b4ea,
+    type: 3}
+  PoolSize: 5
+  PoolCanExpand: 1
+--- !u!114 &845961016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845961014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6733ca52c3fdb5843abc7ba0ed3608c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimumSize: {x: 5, y: 5, z: 0}
+  MaximumSize: {x: 5, y: 5, z: 0}
+  PreserveRatio: 0
+  MinimumRotation: {x: 0, y: 0, z: 0}
+  MaximumRotation: {x: 0, y: 0, z: 0}
+  Spawning: 1
+  OnlySpawnWhileGameInProgress: 0
+  InitialDelay: 0
+  GapOrigin: 1
+  MinimumGap: {x: 150, y: 5, z: 0}
+  MaximumGap: {x: 150, y: 7, z: 0}
+  MinimumYClamp: 0
+  MaximumYClamp: 0
+  MinimumZClamp: 0
+  MaximumZClamp: 0
+  SpawnRotatedToDirection: 1
+--- !u!4 &845961017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845961014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.8, y: 3.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1003432240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1003432243}
+  - component: {fileID: 1003432242}
+  - component: {fileID: 1003432241}
+  m_Layer: 0
+  m_Name: CoinSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1003432241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003432240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7277539b95c0d45895792ecc99ce66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MutualizeWaitingPools: 0
+  NestWaitingPool: 1
+  NestUnderThis: 0
+  GameObjectToPool: {fileID: 6593321752895788945, guid: a792b5681274acb42888dc1693b3ea36,
+    type: 3}
+  PoolSize: 1
+  PoolCanExpand: 1
+--- !u!114 &1003432242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003432240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6733ca52c3fdb5843abc7ba0ed3608c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimumSize: {x: 5, y: 5, z: 0}
+  MaximumSize: {x: 5, y: 5, z: 0}
+  PreserveRatio: 0
+  MinimumRotation: {x: 0, y: 0, z: 0}
+  MaximumRotation: {x: 0, y: 0, z: 0}
+  Spawning: 1
+  OnlySpawnWhileGameInProgress: 0
+  InitialDelay: 0
+  GapOrigin: 0
+  MinimumGap: {x: 10, y: 2, z: 0}
+  MaximumGap: {x: 30, y: 4, z: 0}
+  MinimumYClamp: -5
+  MaximumYClamp: 5
+  MinimumZClamp: -4
+  MaximumZClamp: 4
+  SpawnRotatedToDirection: 1
+--- !u!4 &1003432243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003432240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.49, y: 0.62, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1080557593
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,8 +780,8 @@ MonoBehaviour:
 
     Try double jumping!'
   RecycleBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 82.7, y: 50.1, z: 38.48}
+    m_Center: {x: 50, y: 0, z: 0}
+    m_Extent: {x: 160, y: 50, z: 38.48}
   DeathBounds:
     m_Center: {x: 0, y: 2.93, z: 0}
     m_Extent: {x: 15.7, y: 10.4, z: 0}
@@ -647,7 +807,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1217255868
 PrefabInstance:
@@ -686,7 +846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 479578, guid: 8b1d1328ec81f07408bd9ef50552cd0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: -69.8
       objectReference: {fileID: 0}
     - target: {fileID: 479578, guid: 8b1d1328ec81f07408bd9ef50552cd0e, type: 3}
       propertyPath: m_LocalPosition.z

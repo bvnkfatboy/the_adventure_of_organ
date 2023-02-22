@@ -122,8 +122,6 @@ namespace MoreMountains.InfiniteRunnerEngine
 		/// <param name="loop">If set to true, the sound will loop.</param>
 		public virtual AudioSource PlaySound(AudioClip sfx, Vector3 location, bool loop=false)
 		{
-			if (!Settings.SfxOn)
-				return null;
 			// we create a temporary game object to host our audio source
 			GameObject temporaryAudioHost = new GameObject("TempAudio");
 			// we set the temp audio's position
