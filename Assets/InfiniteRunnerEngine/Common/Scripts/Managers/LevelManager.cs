@@ -477,7 +477,12 @@ namespace MoreMountains.InfiniteRunnerEngine
 
 	        if (GameManager.Instance.CurrentLives<=0)
 			{
-	            GUIManager.Instance.SetGameOverScreen(true);
+				if (_savedPoints > PlayerPrefs.GetFloat("HighScore"))
+                {
+					PlayerPrefs.SetFloat("HighScore", _savedPoints);
+
+				}
+				GUIManager.Instance.SetGameOverScreen(true);
 	            GameManager.Instance.SetStatus(GameManager.GameStatus.GameOver);
 				MMEventManager.TriggerEvent(new MMGameEvent("GameOver"));
 	        }

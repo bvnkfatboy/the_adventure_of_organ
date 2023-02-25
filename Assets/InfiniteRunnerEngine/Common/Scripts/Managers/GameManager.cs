@@ -52,6 +52,7 @@ namespace MoreMountains.InfiniteRunnerEngine
 	        CurrentLives = TotalLives;
 	        _savedTimeScale = TimeScale;
 	        Time.timeScale = TimeScale;
+
 	        if (GUIManager.Instance!=null)
 	        {
 				GUIManager.Instance.Initialize();

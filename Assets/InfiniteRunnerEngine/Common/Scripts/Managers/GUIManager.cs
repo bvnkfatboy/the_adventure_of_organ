@@ -20,6 +20,10 @@ namespace MoreMountains.InfiniteRunnerEngine
 	    public GameObject HeartsContainer;
 	    /// the points counter
 	    public Text PointsText;
+
+		public Text HighScoreText;
+
+		public Text GameOverHighScore;
 		/// the level display
 		public Text LevelText;
 		/// the countdown at the start of a level
@@ -90,9 +94,16 @@ namespace MoreMountains.InfiniteRunnerEngine
 	    /// </summary>
 	    public virtual void OnGameStart()
 	    {
-	    	
-	    }
+		}
 		
+		public virtual void Start()
+        {
+
+			if (PlayerPrefs.GetFloat("HighScore") > 0)
+            {
+				HighScoreText.text = "แต้มสูงสุด: " + Mathf.Round(PlayerPrefs.GetFloat("HighScore"));
+			}
+		}
 		/// <summary>
 		/// Sets the pause.
 		/// </summary>
@@ -134,7 +145,8 @@ namespace MoreMountains.InfiniteRunnerEngine
 	        if (gameOverScreenTextObject!= null)
 	        {
 	            gameOverScreenTextObject.text=""+Mathf.Round(GameManager.Instance.Points);
-	        }
+				GameOverHighScore.text = "แต้มสูงสุดที่เคยทำได้ \n" + Mathf.Round(PlayerPrefs.GetFloat("HighScore"));
+			}
 		}
 			
 		/// <summary>
@@ -145,7 +157,8 @@ namespace MoreMountains.InfiniteRunnerEngine
 			if (PointsText==null)
 				return;
 
-			PointsText.text=GameManager.Instance.Points.ToString("000");	
+			PointsText.text=GameManager.Instance.Points.ToString("000");
+			
 		}
 		
 		/// <summary>

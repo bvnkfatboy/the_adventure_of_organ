@@ -22,7 +22,7 @@ namespace MoreMountains.InfiniteRunnerEngine
 		/// the distance tolerance at which a character is considered grounded
 		public float GroundDistanceTolerance = 0.05f;
 		/// the duration (in seconds) of invincibility on spawn
-		public float InitialInvincibilityDuration = 3f;
+		public float InitialInvincibilityDuration = 0f;
 
 		public bool Invincible => (Time.time - _awakeAt < InitialInvincibilityDuration);
 		
