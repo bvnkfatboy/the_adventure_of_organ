@@ -4,17 +4,12 @@ using MoreMountains.Tools;
 
 namespace MoreMountains.InfiniteRunnerEngine
 {	
-	/// <summary>
-	/// Add this class to an object so it'll move in parallax based on the level's speed.
-	/// Note that this method duplicates the object
-	/// </summary>
+
 	public class Parallax : MMObjectBounds
 	{
 		public enum PossibleDirections { Left, Right, Up, Down, Forwards, Backwards };
 
 
-
-		/// the relative speed of the object
 		public float ParallaxSpeed=0;
 
 		public PossibleDirections ParallaxDirection = PossibleDirections.Left;
@@ -26,9 +21,7 @@ namespace MoreMountains.InfiniteRunnerEngine
 		protected Vector3 _direction;
 		protected float _width;
 
-		/// <summary>
-		/// On start, we store various variables and clone the object
-		/// </summary>
+
 	    protected virtual void Start()
 		{
 			if (ParallaxDirection==PossibleDirections.Left || ParallaxDirection==PossibleDirections.Right)
@@ -72,19 +65,17 @@ namespace MoreMountains.InfiniteRunnerEngine
 
 			_initialPosition=transform.position	;	
 		
-			// we clone the object and position the clone at the end of the initial object
+
 			_clone = (GameObject)Instantiate(gameObject, _newPosition, transform.rotation);
-			// we remove the parallax component from the clone to prevent an infinite loop
+
 			Parallax parallaxComponent = _clone.GetComponent<Parallax>();
 			Destroy(parallaxComponent);		
 		}
 
-		/// <summary>
-		/// On Update, we move the object and its clone
-		/// </summary>
+
 	    protected virtual void Update()
 		{		
-			// we determine the movement the object and its clone need to apply, based on their speed and the level's speed
+
 	        if (LevelManager.Instance!= null)
 	        { 
 				_movement = _direction * (ParallaxSpeed/10) * LevelManager.Instance.Speed * Time.deltaTime;
@@ -93,13 +84,10 @@ namespace MoreMountains.InfiniteRunnerEngine
 	        {
 				_movement = _direction * (ParallaxSpeed / 10) * Time.deltaTime;
 	        }
-	        // we move both objects
 	        _clone.transform.Translate(_movement);
 			transform.Translate(_movement);
 
 
-			
-			// if the object has reached its left limit, we teleport both objects to the right
 			if (ShouldResetPosition())
 			{
 				transform.Translate(-_direction * _width);
