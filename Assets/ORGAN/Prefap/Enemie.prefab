@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6593321752902365123}
   - component: {fileID: 6491867045016474775}
   - component: {fileID: 6593321754513339251}
-  - component: {fileID: 1116142359000179096}
+  - component: {fileID: 7331153794846400430}
   - component: {fileID: 2029180158504116478}
   m_Layer: 0
   m_Name: Enemie
@@ -150,7 +150,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1116142359000179096
+--- !u!114 &7331153794846400430
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,9 +159,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6593321752895788945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bce0a8dd118a14bb804c28e9b44bd5, type: 3}
+  m_Script: {fileID: 11500000, guid: 85b2a012c0b90ef469b57cca326cf01c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KillSoundFx: {fileID: 8300000, guid: 30a05fa8fde4fe1419e2e6327bada86b, type: 3}
 --- !u!95 &2029180158504116478
 Animator:
   serializedVersion: 5

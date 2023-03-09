@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6593321752895479755}
   - component: {fileID: 6593321752899504227}
-  - component: {fileID: 6593321752902292651}
   - component: {fileID: 6593321752902361607}
   - component: {fileID: 6593321752902365123}
   - component: {fileID: 6491867045016474775}
+  - component: {fileID: 3456519053615230069}
   - component: {fileID: 6593321754513339251}
   m_Layer: 0
-  m_Name: Coin
+  m_Name: Potion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,22 +52,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.13
---- !u!114 &6593321752902292651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6593321752895788945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4038c69f3ecb34a3ab2a6dc680ff2114, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PickEffect: {fileID: 0}
-  PickSoundFx: {fileID: 8300000, guid: 097033f4e68a6ed4da71a75ebbb55aa3, type: 3}
-  PointsToAdd: 100
+  m_Radius: 1
 --- !u!114 &6593321752902361607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +97,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BoundsBasedOn: 1
   LifeTime: 0
+--- !u!114 &3456519053615230069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6593321752895788945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b787872eef9d2294cb0dcd3bda37027e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickEffect: {fileID: 0}
+  PickSoundFx: {fileID: 8300000, guid: 37d1861c0e141c14e843b86f63bc3f6b, type: 3}
+  LiveToAdd: 1
 --- !u!212 &6593321754513339251
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -153,7 +153,7 @@ SpriteRenderer:
   m_SortingLayerID: 1414804337
   m_SortingLayer: 2
   m_SortingOrder: 4
-  m_Sprite: {fileID: -136017298, guid: b9d454a4d928501409d987daa62c0239, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a89ef3f3241204148a98a8e797e1faf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
