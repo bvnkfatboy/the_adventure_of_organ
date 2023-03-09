@@ -7,7 +7,7 @@ namespace MoreMountains.InfiniteRunnerEngine
 	/// <summary>
 	/// Add this class to a trigger boxCollider and it'll kill all playable characters that collide with it.
 	/// </summary>
-	public class KillsPlayerOnTouch : MonoBehaviour 
+	public class Enemie : MonoBehaviour 
 	{
 
 		public AudioClip KillSoundFx;
@@ -52,7 +52,13 @@ namespace MoreMountains.InfiniteRunnerEngine
 			{
 				return;
 			}
-			
+
+			if (SoundManager.Instance != null && KillSoundFx != null)
+			{
+				// we play that sound once
+				SoundManager.Instance.PlaySound(KillSoundFx, transform.position);
+			}
+
 			// we ask the LevelManager to kill the character
 			LevelManager.Instance.KillCharacter(player);
 		}
